@@ -38,9 +38,8 @@ export function HistoryContextProvider({ children }: HistoryContextProps) {
     setHistory(history);
   }
 
-  // takes in a historyElement item and adds it to the history
   function addHistoryElementHandler(element: HistoryElement) {
-    // creates a new date
+    
     var today = new Date();
     var date =
       today.getDate() +
@@ -63,7 +62,7 @@ export function HistoryContextProvider({ children }: HistoryContextProps) {
     });
   }
 
-  // takes in an ID and deletes the history element with that ID
+  
   function deleteHistoryElementHandler(id: string) {
     setHistory((prev) => {
       return prev.filter((h) => h.id !== id);
